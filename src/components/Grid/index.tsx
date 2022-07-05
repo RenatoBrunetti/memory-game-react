@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
-import { duplicateRegenerateSortArray } from "../../utils/card-utils";
-import { Card, CardProps } from "../Card";
+import { useRef, useState } from 'react';
+import { duplicateRegenerateSortArray } from '../../utils/card-utils';
+import { Card, CardProps } from '../Card';
 
-import "./styles.css";
+import './styles.css';
 
 export interface GridProps {
   cards: CardProps[];
@@ -72,14 +72,14 @@ export function Grid({ cards }: GridProps) {
 
   return (
     <>
-      <div className="grid__info">
+      <div className='grid__info'>
         <h1>Memory Game</h1>
         <p>
-          Moves: {moves} | Matches: {matches}/{cards.length} |{" "}
+          Moves: {moves} | Matches: {matches}/{cards.length} |{' '}
           <button onClick={handleReset}>Reset</button>
         </p>
       </div>
-      <div className="grid__cards">
+      <div className='grid__cards'>
         {stateCards.map((card) => {
           return <Card {...card} key={card.id} handleClick={handleClick} />;
         })}
